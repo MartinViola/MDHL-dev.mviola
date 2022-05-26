@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/mdhl.css">
+    <link rel="stylesheet" href="./styles/ahl.css">
     <title>MDHL - Registration</title>
+    <script src="./contactUsValidator.js"></script>
 </head>
 
 <body>
@@ -24,109 +25,21 @@
         </nav>
     </header>
     <main class="column">
-        <h2>Registration Form</h2>
-        <form action="./show_data.html">
-            <fieldset>
-                <label for="ifirst_name">Player's First Name:</label>
-                <input id="ifirst_name" type="text" name="first_name">
-                <label for="ilast_name">Last Name:</label>
-                <input id="ilast_name" type="text" name="last_name">
-            </fieldset>
-            <fieldset>
-                <label class="block" for="iaddress">
-                    Street Address:
-                    <input id="iaddress" type="text" name="address">
-                </label>
-                <label for="icity">City:</label>
-                <input id="icity" type="text" name="city">
-                <label for="izip">ZIP Code:</label>
-                <input id="izip" type="number" name="zip">
-            </fieldset>
-            <fieldset class="dflex">
-                <!-- Como cambiar el formato del input de fecha? -->
-                <label for="iage">Birth Date (mm/dd/yyyy):</label>
-                <input id="iage" type="date" name="bday">
-                <label class="remleft">Gender:</label>
-                <label class="remleft" for="ifemale">Female</label>
-                <input id="ifemale" type="radio" name="gender" value="female">
-                <label class="remleft" for="imale">Male</label>
-                <input id="imale" type="radio" name="gender" value="male">
-            </fieldset>
-            <fieldset class="dflex">
-                <label>Grade:</label>
-                <input class="remleft" id="ipreschool" type="radio" name="grade" value="preschool">
-                <label for="ipreschool">Pre-School</label>
-                <input class="remleft" id="i1stgrade" type="radio" name="grade" value="1stgrade">
-                <label for="i1stgrade">1st</label>
-                <input class="remleft" id="i2ndgrade" type="radio" name="grade" value="2ndgrade">
-                <label for="i2ndgrade">2nd</label>
-                <input class="remleft" id="i3rdgrade" type="radio" name="grade" value="3rdgrade">
-                <label for="i3rdgrade">3rd</label>
-                <input class="remleft" id="i4thgrade" type="radio" name="grade" value="4thgrade">
-                <label for="i4thgrade">4th</label>
-                <input class="remleft" id="i5thgrade" type="radio" name="grade" value="5thgrade">
-                <label for="i5thgrade">5th</label>
-            </fieldset>
-            <h4 id="nopadding">Which elementary school do you live near?</h4>
-            <fieldset class="dflex">
-                <legend>Closest School:</legend>
-                <div class="column">
-                    <label for="iajkatz"><input id="iajkatz" type="radio" name="school" value="ajkatz"> AJ-Katzenmaier</label>
-                    <label for="igreen"><input id="igreen" type="radio" name="school" value="green"> Greenbay</label>
-                    <label for="ihoward"><input id="ihoward" type="radio" name="school" value="howard"> Howard A Yeager</label>
-                </div>
-                <div class="column">
-                    <label for="imarjo"><input id="imarjo" type="radio" name="school" value="marjo"> Marjorie P Hart</label>
-                    <label for="inorth"><input id="inorth" type="radio" name="school" value="north"> North Elementary</label>
-                    <label for="isouth"><input id="isouth" type="radio" name="school" value="south"> South Elementary</label>
-                </div>
-            </fieldset>
-            <fieldset class="dflex">
-                <legend>What position(s) do you normally play?(check all that apply)</legend>
-                <div class="column">
-                    <label for="iforwd"><input id="iforwd" type="checkbox" name="posforwd" value="forwd"> Forward</label>
-                    <label for="idef"><input id="idef" type="checkbox" name="posdef" value="def"> Defense</label>
-                </div>
-                <div class="column">
-                    <label for="imidf"><input id="imidf" type="checkbox" name="posmidf" value="midf"> Midfield</label>
-                    <label for="igoal"><input id="igoal" type="checkbox" name="posgoal" value="goal"> Goalkeeper</label>
-                </div>
-            </fieldset>
-            <fieldset class="dflex">
-                <legend>Uniform Size:</legend>
-                <div class="column">
-                    <label for="iyouths"><input id="iyouths" type="radio" name="size" value="youths"> Youth Small</label>
-                    <label for="iyouthm"><input id="iyouthm" type="radio" name="size" value="youthm"> Youth Medium</label>
-                    <label for="iyouthl"><input id="iyouthl" type="radio" name="size" value="youthl"> Youth Large</label>
-                    <label for="ismall"><input id="ismall" type="radio" name="size" value="small"> Small</label>
-                </div>
-                <div class="column top">
-                    <label for="imedium"><input id="imedium" type="radio" name="size" value="medium"> Medium</label>
-                    <label for="ilarge"><input id="ilarge" type="radio" name="size" value="large"> Large</label>
-                    <label for="ixxl"><input id="ixxl" type="radio" name="size" value="xxl"> Extra-Large</label>
-                </div>
-            </fieldset>
-            <h3>Permission to play</h3>
-            <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the
-                rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical Injury
-                associated with hockey and in consideration for the League accepting the registrant for its hockey
-                programs and activities, I hereby release, discharge, and/or otherwise indemnify MDHL, their employees
-                and associated personnel and volunteers, including the facilities used for practices and games, against
-                any claim by or on behalf of the registrant as a result of the registrant's participation in the
-                programand/orbeing transported to or from MDHL sponsored activities, which transportation By signing
-                below, I herebyagree andauthorizethe above.In addition, by signing below, lalso acknowledge that I have
-                read the cancellation policy and agree to its terms.</p>
-            <label for="iparent">Parent/Guardian Signature:</label>
-            <input id="iparent" type="text" name="parent">
-            <div class="dflex spcbtwn"> 
-                <div>
-                    <label for="idate">Date:</label>
-                    <input id="idate" type="date" name="date">
-                </div>           
-                <input id="btnsubmit" type="submit" value="Accept & Submit Form">
-            </div>
+        
+        <form id="contactUsForm" onsubmit="return validation()">
+            <div id="error_message"></div>
+            <legend>Contact Us</legend>
 
+            <input id="contact_name" type="text" placeholder="Name">
+
+            <input id="phone_number" type="text" placeholder="Phone number">
+
+            <input id="contact_email" type="text" placeholder="Email">
+
+            <textarea id="contact_subject" placeholder="Leave us your comment..."></textarea>
+            <input id="btn_submit" type="submit" value="Submit">
         </form>
+
     </main>
     <footer>
         <p>Martín Viola</p>
